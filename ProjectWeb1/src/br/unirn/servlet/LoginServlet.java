@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet{
 		} else {
 			PrintWriter out= resp.getWriter();
 			out.println("<font color=red>Either user name or password is wrong.</font>");
-			resp.sendRedirect("/projetoWeb/paginas/login.jsp");
+			resp.sendRedirect("/projetoWeb/login.jsp");
 		}
 			
 	}

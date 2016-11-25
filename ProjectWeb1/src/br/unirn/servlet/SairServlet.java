@@ -15,6 +15,6 @@ public class SairServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		req.getSession().invalidate();
-		resp.sendRedirect("/loginservlet/login.jsp");
+		resp.sendRedirect("/projetoWeb/login.jsp");
 	}
 }

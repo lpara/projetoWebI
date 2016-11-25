@@ -25,7 +25,7 @@ public void doFilter(ServletRequest request, ServletResponse response, FilterCha
 		Usuario usuario = (Usuario) req.getSession().getAttribute("usuario");
 		
 		if (usuario == null)
-			res.sendRedirect("/loginServlet/login.jsp");
+			res.sendRedirect("/projetoWeb/login.jsp");
 		else
 			chain.doFilter(request, response);
 	}

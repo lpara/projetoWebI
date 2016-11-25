@@ -1,6 +1,7 @@
 package br.unirn.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,9 +24,11 @@ public class LoginServlet extends HttpServlet{
 			Usuario u = new Usuario();
 			u.setNome("Admin");
 			req.getSession().setAttribute("usuario", u);
-			resp.sendRedirect("/LoginServlet/paginas/conteudo.jsp");
+			resp.sendRedirect("/projetoWeb/paginas/home.jsp");
 		} else {
-			resp.sendRedirect("/LoginServlet/paginas/login.jsp");
+			PrintWriter out= resp.getWriter();
+			out.println("<font color=red>Either user name or password is wrong.</font>");
+			resp.sendRedirect("/projetoWeb/paginas/login.jsp");
 		}
 			
 	}

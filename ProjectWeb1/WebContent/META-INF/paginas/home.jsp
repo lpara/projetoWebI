@@ -10,6 +10,6 @@
 	
 	<body>
 		<h2>Usuário Logado</h2> <%=((Usuario) session.getAttribute("usuario")).getNome()  %>
-		<a href="/LoginServlet/sair">Sair</a>
+		<a href="/projetoWeb/sair">Sair</a>
 	</body>
 </html>

@@ -22,7 +22,7 @@ public void doFilter(ServletRequest request, ServletResponse response, FilterCha
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse res = (HttpServletResponse) response;
 		
-		Usuario usuario = (Usuario) req.getSession().getAttribute("usuario");
+		Usuario usuario = (Usuario) req.getSession().getAttribute("usuarioLogado");
 		
 		if (usuario == null)
 			res.sendRedirect("/projetoWeb/login.jsp");

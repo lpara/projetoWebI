@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Papel {
 
-private int codigo;
+	private int codigo;
 	
 	private String nome;
 	

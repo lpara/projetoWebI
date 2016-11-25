@@ -9,6 +9,7 @@
 	</head>
 	
 	<body>
-		<jsp:forward page="/paginas/UserController?action=listUser" />
+		<h2>Usuário Logado</h2> <%=((Usuario) session.getAttribute("usuarioLogado")).getNome()  %>
+		<a href="/projetoWeb/sair">Sair</a>
 	</body>
 </html>

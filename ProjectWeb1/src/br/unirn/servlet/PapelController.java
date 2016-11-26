@@ -118,7 +118,7 @@ public class PapelController extends HttpServlet{
 	 * @param request
 	 */
 	private void cadastrar(HttpServletRequest request) {
-		request.getSession().setAttribute("papel", new Usuario());
+		request.getSession().setAttribute("papel", new Papel());
 		request.getSession().setAttribute("operacao", "Cadastrar");
 		forward = FORM;
 	}

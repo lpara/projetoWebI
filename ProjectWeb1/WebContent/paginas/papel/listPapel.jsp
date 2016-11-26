@@ -12,6 +12,7 @@
     <table border=1>
         <thead>
             <tr>
+            	<th>Role Codigo</th>
                 <th>Role Name</th>
                 <th>Role Description</th>
                 <th colspan=2>Action</th>
@@ -20,14 +21,15 @@
         <tbody>
             <c:forEach items="${listaPapeis}" var="role">
                 <tr>
-                    <td><c:out value="${role.codigo}" /></td>
+                	<td><c:out value="${role.codigo}" /></td>
                     <td><c:out value="${role.nome}" /></td>
-                    <td><a href="PapelController?action=edit&nome=<c:out value="${role.nome}"/>">Update</a></td>
-                    <td><a href="PapelController?action=delete&nome=<c:out value="${role.nome}"/>">Delete</a></td>
+                    <td><c:out value="${role.descricao}" /></td>
+                    <td><a href="PapelController?acaoPapel=atualizar&nome=<c:out value="${role.nome}"/>">Update</a></td>
+                    <td><a href="PapelController?acaoPapel=remover&nome=<c:out value="${role.nome}"/>">Delete</a></td>
                 </tr>
             </c:forEach>
         </tbody>
     </table>
-    <p><a href="PapelController?action=insert">Add Role</a></p>
+    <p><a href="../paginas/papel/PapelController?acaoPapel=adicionar">Add Role</a></p>
 </body>
 </html>

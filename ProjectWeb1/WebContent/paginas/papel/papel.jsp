@@ -20,12 +20,10 @@
 	    </script>
 	
 		<form method="POST" action='PapelController' name="frmAddPapel">
-			Nome : <input type="text" name="nome" placeholder="Informe o Titulo do Papel"
-				value="<c:out value="${papel.nome}" />" /> <br /> Nome : <input
-				type="number" name="codigo" placeholder="Informe Seu Codigo"
-				value="<c:out value="${papel.codigo}" />" /> <br /> Codigo : <input
-				type="text" name="descricao" placeholder="Informa uma Descricao"
-				value="<c:out value="${papel.descricao}" />" /> <br />
+				Nome : <input type="text" name="nome" placeholder="Informe o Título do Papel" value="<c:out value="${papel.nome}" />" /> <br /> 
+				Código : <input type="number" name="codigo" value="<c:out value="${papel.codigo}" />" /> <br /> 
+				Descrição : <input type="text" name="descricao" placeholder="Informe uma Descriçâo"value="<c:out value="${papel.descricao}" />" /> <br />
+				<input type="submit" value="${operacao}" />
 		</form>
 	</body>
 </html>

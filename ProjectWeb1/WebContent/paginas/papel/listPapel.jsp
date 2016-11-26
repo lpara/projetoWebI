@@ -30,6 +30,7 @@
             </c:forEach>
         </tbody>
     </table>
-    <p><a href="../paginas/papel/PapelController?acaoPapel=adicionar">Add Role</a></p>
+    <p><a href="PapelController?acaoPapel=adicionar">Adicionar</a></p>
+    <p><a href="PapelController?acaoPapel=voltar">Voltar</a></p>
 </body>
 </html>

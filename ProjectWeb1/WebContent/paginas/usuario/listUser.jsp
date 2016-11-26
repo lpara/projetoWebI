@@ -90,6 +90,9 @@
 		<div id="botao">
 			<a href="UserController?acao=adicionar">Adicionar Usuário</a>
 		</div>
+		<div id="botao-voltar">
+			<a href="UserController?acao=voltar">Voltar</a>
+		</div>
 	</div>
 
 </body>

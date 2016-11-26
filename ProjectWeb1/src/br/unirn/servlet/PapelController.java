@@ -19,6 +19,7 @@ public class PapelController extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	private static String FORM = "/paginas/papel/papel.jsp";
 	private static String LISTA = "/paginas/papel/listPapel.jsp";
+	private static String HOME = "/projetoWeb/paginas/home.jsp";
 
 	private String forward = "";
 	private String acao = "";
@@ -41,6 +42,8 @@ public class PapelController extends HttpServlet{
 			atualizar(request);
 		} else if (acao.equalsIgnoreCase("listar")) {
 			listar(request);
+		} else if(acao.equalsIgnoreCase("voltar")){
+			voltar(response);
 		} else {
 			cadastrar(request);
 		}
@@ -121,6 +124,16 @@ public class PapelController extends HttpServlet{
 		request.getSession().setAttribute("papel", new Papel());
 		request.getSession().setAttribute("operacao", "Cadastrar");
 		forward = FORM;
+	}
+	
+	/**
+	 * Operação de voltar
+	 * 
+	 * @param response
+	 * @throws IOException 
+	 */
+	private void voltar(HttpServletResponse response) throws IOException {
+		response.sendRedirect(HOME);
 	}
 	
 	/**

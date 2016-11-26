@@ -9,6 +9,34 @@
 	</head>
 	
 	<body>
-		<jsp:forward page="/paginas/UserController?acao=listar" />
+		<form action="/usuario/UserController?acao=listar" method="get">
+			<div id="navegar-box-user">
+				<div id="navegar-box-interno-user">
+					<div id="botoes-user">
+						<div id="botao-user">
+							<!--  <input type="submit" value="Gerenciar Usuario">-->
+							<p><a href="usuario/UserController?acao=listar">Gerenciar Usuario</a></p>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</form>
+		
+		
+		
+		<form action="/papel/PapelController?acaoPapel=listar" method="get">
+			<div id="navegar-box-papel">
+				<div id="navegar-box-interno-papel">
+					<div id="botoes-papel">
+						<div id="botao-papel">
+							<!-- <input type="submit" value="Gerenciar Papel"> -->
+							<p><a href="papel/PapelController?acaoPapel=listar">Gerenciar Papel</a></p>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</form>
 	</body>
 </html>

@@ -13,11 +13,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.unirn.dominio.Usuario;
 
-@WebServlet("/paginas/UserController")
+@WebServlet("/paginas/usuario/UserController")
 public class UserController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static String FORM = "/paginas/user.jsp";
-	private static String LISTA = "/paginas/listUser.jsp";
+	private static String FORM = "/paginas/usuario/user.jsp";
+	private static String LISTA = "/paginas/usuario/listUser.jsp";
+	private static String HOME = "/projetoWeb/paginas/home.jsp";
 
 	private String forward = "";
 	private String acao = "";
@@ -40,7 +41,9 @@ public class UserController extends HttpServlet {
 			atualizar(request);
 		} else if (acao.equalsIgnoreCase("listar")) {
 			listar(request);
-		} else {
+		} else if(acao.equalsIgnoreCase("voltar")){
+			voltar(response);
+		}else {
 			cadastrar(request);
 		}
 
@@ -120,6 +123,16 @@ public class UserController extends HttpServlet {
 		request.getSession().setAttribute("user", new Usuario());
 		request.getSession().setAttribute("operacao", "Cadastrar");
 		forward = FORM;
+	}
+	
+	/**
+	 * Operação de voltar
+	 * 
+	 * @param response
+	 * @throws IOException 
+	 */
+	private void voltar(HttpServletResponse response) throws IOException {
+		response.sendRedirect(HOME);
 	}
 
 	/**

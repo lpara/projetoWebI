@@ -42,7 +42,7 @@
 					<input type="password"  value="<c:out value="${user.senha}" />" name="senha" placeholder="Informe Sua Senha">	
 				</div>
 				
-				<div class="input-div" id="input-confirma-senha"><font face="sans-serif"><b> Confirma Senha:</b></font>
+				<div class="input-div" id="input-confirma-senha"><font face="sans-serif"><b> Confirmar Senha:</b></font>
 					<input type="password"  value="<c:out value="${user.confirmaSenha}" />" name="confirmaSenha" placeholder="Confirme Sua Senha">	
 				</div>
 				

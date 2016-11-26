@@ -1,5 +1,6 @@
 package br.unirn.dominio;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Papel {
@@ -33,6 +34,17 @@ public class Papel {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+	
+	public List<String> validar() {
+		List<String> erros = new ArrayList<>();
+		if (nome.isEmpty())
+			erros.add("Nome não informado.<br/>");
+		if (codigo == 0)
+			erros.add("Código não informado.<br/>");
+		if (descricao == null || descricao.isEmpty())
+			erros.add("Descrição não informado.<br/>");
+		return erros;
 	}
 
 }

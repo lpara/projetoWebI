@@ -5,15 +5,34 @@
 	<head>
 		<meta http-equiv = "Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Login</title> 
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<style>
+			body{
+				background-color:#11a6d4;
+				}
+		</style>
 	</head>
 	<body>
 		<form action="logar" method="post">
-			<h1>Bem vindo!</h1>
-			<fieldset>
-				<p> <input type="text" name="login" placeholder="Usuario..">
-				<p> <input type="password" name="senha" placeholder="Senha..">
-				<p> <input type="submit" value="logar">
-			</fieldset>
+			<div id="login-box">
+				<div id="login-box-interno">
+					<div id="login-box-label">
+						Entrar no Sistema
+					</div>
+					<div class="input-div" id="input-usuario">
+						<input type="text" value="Usuário" name="login">	
+					</div>
+					<div class="input-div" id="input-senha">
+						<input type="password"  name="senha" placeholder="Senha">	
+					</div>
+					
+					<div id="botoes">
+						<div id="botao">
+							<input type="submit" value="Entrar">
+						</div>
+					</div>
+				</div>
+			</div>
 		</form>
 	</body>
 </html>

@@ -54,6 +54,7 @@ public class UserController extends HttpServlet {
             break;
         case "listar":
             listar(request);
+            break;
         case "permissoes":
             permissoes(request);
             break;

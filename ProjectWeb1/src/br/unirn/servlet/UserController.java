@@ -131,8 +131,8 @@ public class UserController extends HttpServlet {
 		user = new Usuario();
 		user.setNome(request.getParameter("nome"));
 		user.setLogin(request.getParameter("login"));
-		user.setLogin(request.getParameter("senha"));
-		user.setLogin(request.getParameter("confirmaSenha"));
+		user.setSenha(request.getParameter("senha"));
+		user.setConfirmaSenha(request.getParameter("confirmaSenha"));
 	}
 
 	/**

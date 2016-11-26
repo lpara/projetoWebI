@@ -9,6 +9,6 @@
 	</head>
 	
 	<body>
-		<jsp:forward page="/paginas/UserController?action=listUser" />
+		<jsp:forward page="/paginas/UserController?acao=listar" />
 	</body>
 </html>

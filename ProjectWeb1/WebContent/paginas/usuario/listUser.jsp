@@ -43,7 +43,6 @@
 		<div class="botao">
 			<a href="UserController?acao=adicionar">Adicionar Usuário</a>
 		</div>
-
 	</div>
 
 </body>

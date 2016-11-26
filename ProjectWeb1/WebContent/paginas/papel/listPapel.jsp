@@ -25,7 +25,7 @@
 			<th>Código</th>
 			<th>Nome</th>
 			<th>Descrição</th>
-			<th colspan="2">Ação</th>
+			<th colspan="2">Ações</th>
 		</tr>
 		<tbody>
 			<c:forEach items="${listaPapeis}" var="role">

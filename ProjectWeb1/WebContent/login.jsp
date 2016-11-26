@@ -20,7 +20,7 @@
 						Entrar no Sistema
 					</div>
 					<div class="input-div" id="input-usuario">
-						<input type="text" value="Usuário" name="login">	
+						<input type="text" placeholder="Usuário" name="login">	
 					</div>
 					<div class="input-div" id="input-senha">
 						<input type="password"  name="senha" placeholder="Senha">	

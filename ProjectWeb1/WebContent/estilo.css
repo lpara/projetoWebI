@@ -23,6 +23,16 @@
 		box-shadow:0px 0px 5px black;
 		overflow:hidden;
 	}
+	#login-box-interno2{
+		width:360px;
+		height:450px;
+		background-color:#fdfdfd;
+		position: absolute;
+		margin:10px;
+		border-radius:5px;
+		box-shadow:0px 0px 5px black;
+		overflow:hidden;
+	}
 	#login-box-label{
 		background-color:#fafbfc;
 		height:45px;

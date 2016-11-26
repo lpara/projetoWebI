@@ -11,7 +11,7 @@
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
 <title>Adicionar Novo Usuário</title>
-<link rel="stylesheet" type="text/css" href="../estilo.css">
+<link rel="stylesheet" type="text/css" href="../../estilo.css">
 <style>
 	body{
 		background-color:#11a6d4;

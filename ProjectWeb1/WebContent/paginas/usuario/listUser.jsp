@@ -6,64 +6,14 @@
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Gerenciar Usuários</title>
-
-<style>
-	body{
-		font-family: sans-serif;
-		font-size: 11pt;
-		background-color:#11a6d4;
-	}
-	table, th, td{
-		border: 1px solid black;
-		border-collapse:collapse;
-		opacity:0.95;
-	}
-	table{
-		width:80%;
-	}
-	th, td{
-		padding: 10px;
-		text-align: center;
-	}
-	th{
-		background-color: #a70000;
-		color:white;
-	}
-	tr:nth-child(even){
-		background-color: #eBeBeB;
-	}
-	tr:nth-child(odd){
-		background-color: white;
-	}
-	#header{
-		background-color:1992b7;
-		color:black;
-		font:bold 12px sans-serif;
-	}
-	#botao{
-		background:    #fff;
-		background:    -webkit-linear-gradient(#fff, #fff);
-		background:    linear-gradient(#fff, #fff);
-		border:        1px solid #569;
-		border-radius: 5px;
-		box-shadow:    0 1px 0 0 #444;
-		color:         #666;
-		display:       inline-block;
-		padding:       8px 20px;
-		font:          normal 700 18px/1 "Calibri", sans-serif;
-		text-align:    center;
-		text-shadow:   0px 0px 0 #000;
-	}
-	.div-botao{
-		width:1000px;
-		height:47px;
-		padding-left:573px;
-		padding-top:26px;
-	}
-</style>
-
+	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+	<title>Gerenciar Usuários</title>
+	<link rel="stylesheet" type="text/css" href="../../estiloTabela.css">
+	<style>
+		body{
+			background-color:#11a6d4;
+			}
+	</style>
 </head>
 <body>
 	<table align="center">
@@ -87,12 +37,13 @@
 		</tbody>
 	</table>
 	<div class="div-botao">
-		<div id="botao">
-			<a href="UserController?acao=adicionar">Adicionar Usuário</a>
-		</div>
-		<div id="botao-voltar">
+		<div class="botao">
 			<a href="UserController?acao=voltar">Voltar</a>
 		</div>
+		<div class="botao">
+			<a href="UserController?acao=adicionar">Adicionar Usuário</a>
+		</div>
+
 	</div>
 
 </body>

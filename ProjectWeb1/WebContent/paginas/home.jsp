@@ -6,37 +6,39 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Página Principal</title>
+		<link rel="stylesheet" type="text/css" href="../estilo.css">
+		<link rel="stylesheet" type="text/css" href="../estiloTabela.css">
+		<style>
+			body{
+				background-color:#11a6d4;
+				}
+		</style>
 	</head>
 	
 	<body>
-		<form action="/usuario/UserController?acao=listar" method="get">
-			<div id="navegar-box-user">
-				<div id="navegar-box-interno-user">
-					<div id="botoes-user">
-						<div id="botao-user">
-							<!--  <input type="submit" value="Gerenciar Usuario">-->
-							<p><a href="usuario/UserController?acao=listar">Gerenciar Usuario</a></p>
-						</div>
-						
+		<div id="login-box">
+			<div id="login-box-interno">
+				<div id="login-box-label">
+					Menu
+				</div>
+				<div class="input-div" align="center">
+					<div class="botao" style="width: 157px;">
+						<form action="/usuario/UserController?acao=listar" method="get">
+							<a href="usuario/UserController?acao=listar">Gerenciar Usuário</a>
+						</form>
+					</div>
+					<div class="botao" style="width: 160px;">
+						<form action="/papel/PapelController?acaoPapel=listar" method="get">
+							<a href="papel/PapelController?acaoPapel=listar">Gerenciar Papel</a>
+						</form>
+					</div>
+					<div class="botao">
+						<form action="/papel/PapelController?acaoPapel=listar" method="get">
+							<a href="papel/PapelController?acaoPapel=listar">Gerenciar Permissões</a>
+						</form>
 					</div>
 				</div>
 			</div>
-		</form>
-		
-		
-		
-		<form action="/papel/PapelController?acaoPapel=listar" method="get">
-			<div id="navegar-box-papel">
-				<div id="navegar-box-interno-papel">
-					<div id="botoes-papel">
-						<div id="botao-papel">
-							<!-- <input type="submit" value="Gerenciar Papel"> -->
-							<p><a href="papel/PapelController?acaoPapel=listar">Gerenciar Papel</a></p>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-		</form>
+		</div>
 	</body>
 </html>

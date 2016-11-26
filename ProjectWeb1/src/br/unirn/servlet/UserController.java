@@ -16,7 +16,7 @@ import br.unirn.dominio.Usuario;
 @WebServlet("/paginas/usuario/UserController")
 public class UserController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static String FORM = "/paginas/usuario/user.jsp";
+	private static String FORM = "/paginas/usuario/form.jsp";
 	private static String LISTA = "/paginas/usuario/listUser.jsp";
 	private static String HOME = "/projetoWeb/paginas/home.jsp";
 
@@ -35,16 +35,22 @@ public class UserController extends HttpServlet {
 		acao = request.getParameter("acao");
 		usuarios = (List<Usuario>) request.getSession().getAttribute("listaUsuarios");
 
-		if (acao.equalsIgnoreCase("remover")) {
+		switch (acao.toLowerCase()) {
+		case "remover":
 			remover(request);
-		} else if (acao.equalsIgnoreCase("atualizar")) {
+			break;
+		case "atualizar":
 			atualizar(request);
-		} else if (acao.equalsIgnoreCase("listar")) {
+			break;
+		case "listar":
 			listar(request);
-		} else if(acao.equalsIgnoreCase("voltar")){
+			break;
+		case "voltar":
 			voltar(response);
-		}else {
+			break;
+		default:
 			cadastrar(request);
+			break;
 		}
 
 		RequestDispatcher view = request.getRequestDispatcher(forward);

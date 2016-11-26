@@ -17,7 +17,7 @@ import br.unirn.dominio.Usuario;
 @WebServlet("/paginas/papel/PapelController")
 public class PapelController extends HttpServlet{
 	private static final long serialVersionUID = 1L;
-	private static String FORM = "/paginas/papel/papel.jsp";
+	private static String FORM = "/paginas/papel/form.jsp";
 	private static String LISTA = "/paginas/papel/listPapel.jsp";
 	private static String HOME = "/projetoWeb/paginas/home.jsp";
 
@@ -36,18 +36,24 @@ public class PapelController extends HttpServlet{
 		acao = request.getParameter("acaoPapel");
 		papeis = (List<Papel>) request.getSession().getAttribute("listaPapeis");
 
-		if (acao.equalsIgnoreCase("remover")) {
+		switch (acao.toLowerCase()) {
+		case "remover":
 			remover(request);
-		} else if (acao.equalsIgnoreCase("atualizar")) {
+			break;
+		case "atualizar":
 			atualizar(request);
-		} else if (acao.equalsIgnoreCase("listar")) {
+			break;
+		case "listar":
 			listar(request);
-		} else if(acao.equalsIgnoreCase("voltar")){
+			break;
+		case "voltar":
 			voltar(response);
-		} else {
+			break;
+		default:
 			cadastrar(request);
+			break;
 		}
-
+		
 		RequestDispatcher view = request.getRequestDispatcher(forward);
 		view.forward(request, response);
 	}

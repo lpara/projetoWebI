@@ -96,6 +96,10 @@ public class PermissaoController extends HttpServlet{
         }
         
         List<Papel> papeis = (List<Papel>) request.getSession().getAttribute("listaPapeis");
+        if(papeis == null){
+        	papeis = new ArrayList<Papel>();
+        }
+        
         List<Papel> papeisDisponiveis = new ArrayList<>();
         for (Papel papel : papeis){
             if(!user.getPapeis().contains(papel))
